@@ -1,0 +1,122 @@
+.notecomp{
+    border:1px solid grey;
+    border-radius: 8px;
+    width: 200px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10px;
+    box-shadow: 2px 2px 0 gainsboro;
+}
+
+.notecomp:hover .hovbutton{
+    display: flex;
+}
+
+.notecomp:hover .hovpin{
+    display: flex;
+}
+
+.Notec{
+    width: 95%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top:4px;
+}
+
+.adjust{
+    position: relative;
+    left: 10px;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.adjust1{
+    width: max-content;
+    position: relative;
+    left: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    height: max-content;
+}
+
+.note123{
+    width: max-content;
+    height:auto;
+    display: flex;
+    border: none;
+    outline: none;
+    flex-wrap: wrap;
+}
+
+.Button111{
+    height:25px;
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hovbutton{
+    width:100%;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hovpin{
+    display: none;
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Editnote{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input1{
+    border-radius: 2px;
+    width: 280px;
+    height: 20px;
+    outline: none;
+    border: none;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+}
+
+.input2{
+    border-radius: 2px;
+    width: 100%;
+    height: 20px;
+    outline: none;
+    border: none;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+}
+
+.Buttonpop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttonpop{
+    width:70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

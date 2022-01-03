@@ -1,0 +1,19 @@
+.takenotecontainers{
+    width: 40%;
+    height: 120px;
+    position: relative;
+    top: 50px;
+    left: 300px;
+    flex-wrap: wrap;
+}
+
+.notesContainer{
+    width: 900px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    left:300px;
+    top:10px;
+}

@@ -1,0 +1,21 @@
+.colorbox{
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: white;
+    width: 150px;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.color1{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
