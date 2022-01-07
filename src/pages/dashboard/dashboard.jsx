@@ -7,7 +7,7 @@ import '../dashboard/dash.css'
 import { getNote, getArchive, getTrash } from '../../services/dataservice'
 import SideBar from '../../components/NavBar/sideNav'
 import ColorPopper from '../../components/ColorPopper/colorPopper'
-
+import {withRouter} from 'react-router-dom';
 
 function Dashboard() {
     const [switchNotesContainers, setSwitchNotesContainers] = React.useState(false)
@@ -123,4 +123,4 @@ function Dashboard() {
     )
 }
 
-export default Dashboard
+export default withRouter(Dashboard)
