@@ -13,7 +13,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import LightbulbOutlinedIcon from '@mui/icons-material/LightbulbOutlined';
 import './sidebar.css'
-
+import { connect } from 'react-redux';
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
@@ -81,11 +81,12 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     }),
 );
 
-export default function SideBar(props) {
+ function SideBar(props) {
 
     const archiveNotes = (data) => {
         console.log("clicked archive side nav" + data)
-        props.fetchArchiveList("ArchiveNotes")
+        // props.fetchArchiveList("ArchiveNotes")
+        props.dispatch({type:'Clicked_On_Archive'})
     }
 
     const noteLists = (data) => {
@@ -131,3 +132,4 @@ export default function SideBar(props) {
         </Box>
     );
 }
+export default connect()(SideBar)

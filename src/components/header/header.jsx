@@ -5,20 +5,21 @@ import "antd/dist/antd.css";
 import { FaBars, FaUserCircle } from "react-icons/fa";
 import { SiGooglekeep } from "react-icons/si";
 import { GrApps, GrFlows, GrPerformance, GrRefresh, GrSearch } from "react-icons/gr"
-
+import {connect} from 'react-redux'
 function Header(props) {
 
     const onClickEvent = () => {
         console.log(props.isDrawer)
         props.isDrawer ? props.listentoHeader(false) : props.listentoHeader(true)
     }
+    console.log(props)
 
     return (
         <div className='header'>
             <div className='keeplogo'>
                 <FaBars onClick={onClickEvent} style={{ fontSize: "20px" }} />
                 <SiGooglekeep style={{ fontSize: "20px" }} />
-                <span className="title">Fundoo</span>
+                <span className="title">{props.title}</span>
             </div>
             <div className="Search">
                 <GrSearch style={{ fontSize: "20px" }} />
@@ -37,4 +38,10 @@ function Header(props) {
     )
 }
 
-export default Header
+const mapStateToProps = (state) => {
+    return {
+        title  : state.navReducer.currentTitle
+    }
+}
+
+export default connect(mapStateToProps)(Header)

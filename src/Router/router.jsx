@@ -10,9 +10,12 @@ import Dashboard from "../pages/dashboard/dashboard";
 import SignIn from "../pages/signin/signin";
 import SignUp from "../pages/signup/signup";
 import AuthRoute from "../components/AuthRoute/AuthRoute";
+import { Provider } from "react-redux";
+import store from '../redux/store'
 
 export default function RouterDOM() {
   return (
+    <Provider store={store}>
     <Router>
 
       {/* A <Switch> looks through its children <Route>s and
@@ -23,5 +26,6 @@ export default function RouterDOM() {
         <ProtectedRoute path="/dashboard" component={Dashboard} />
       </Switch>
     </Router>
+    </Provider>
   );
 }
